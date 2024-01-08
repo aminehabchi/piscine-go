@@ -1,0 +1,2 @@
+find -name "*[z]" | find -name "[a]*"
+find -name "*[z]" & find -name "[a]*"
