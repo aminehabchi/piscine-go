@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintComb(){
+func printcomb(){
  var ones int=0
   var tens int=0
   var hands int=0
