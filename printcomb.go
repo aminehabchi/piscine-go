@@ -2,27 +2,31 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func printcomb(){
- var ones int=0
-  var tens int=0
-  var hands int=0
+func PrintComb(){
+ ones :='0'
+  tens :='0'
+  hands :='0'
   
   
   for i:=0 ; i<=789 ; i++ {
 
-    if ones<9{
+    if ones<'9'{
       ones++
-    }else if tens<9{
-      tens++;ones=0
+    }else if tens<'9'{
+      tens++;ones='0'
     }else{
-      hands++;tens=0;ones=0
+      hands++;tens='0';ones='0'
     }
     if ones>tens && tens >hands{
-    z01.PrintRune(rune(hands) +'0')
-    z01.PrintRune(rune(tens) +'0')
-    z01.PrintRune(rune(ones) +'0')
-    if i<789{z01.PrintRune(',')}
-  }
+     
+    z01.PrintRune(hands)
+    z01.PrintRune(tens)
+    z01.PrintRune(ones )
+      
+    if hands!='7'  {
+      z01.PrintRune(',')
+      z01.PrintRune(' ')}
+    }
   }
   
   }
