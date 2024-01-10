@@ -3,52 +3,19 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbr(n int) {
-	if n == 0 {
-		z01.PrintRune('0')
+	t := 1
+	if n < 0 {
+		t = -1
+		z01.PrintRune('-')
+	}
+	if n != 0 {
+		f := (n / 10) * t
+		if f != 0 {
+			PrintNbr(f)
+		}
+		k := (n % 10 * t) + '0'
+		z01.PrintRune(rune(k))
 	} else {
-		if n < 0 {
-			z01.PrintRune('-')
-			n = n * -1
-		}
-		c := 1
-		i := 0
-		p := 0
-		// length i c=1000
-		for c > 0 {
-			if c != 0 {
-				if n/c <= 0 {
-					break
-				}
-			}
-			i++
-			c = c * 10
-		}
-		c = c / 10
-		var a int
-		var b int
-		for j := 0; j < i; j++ {
-			if c != 0 {
-				a = n % c
-			}
-			b = n - a
-			n = a
-			if c != 0 {
-				b = b / c
-			}
-			c = c / 10
-
-			for k := '0'; k <= '9'; k++ {
-				if p == b {
-					z01.PrintRune(k)
-				}
-
-				if p == 9 {
-					p = 0
-				} else {
-					p++
-				}
-			}
-
-		}
+		z01.PrintRune('0')
 	}
 }
