@@ -15,9 +15,10 @@ func PrintNbr(n int) {
 		p := 0
 		// length i c=1000
 		for c > 0 {
-
-			if n/c <= 0 {
-				break
+			if c != 0 {
+				if n/c <= 0 {
+					break
+				}
 			}
 			i++
 			c = c * 10
@@ -26,11 +27,16 @@ func PrintNbr(n int) {
 		var a int
 		var b int
 		for j := 0; j < i; j++ {
-			a = n % c
+			if c != 0 {
+				a = n % c
+			}
 			b = n - a
 			n = a
-			b = b / c
+			if c != 0 {
+				b = b / c
+			}
 			c = c / 10
+
 			for k := '0'; k <= '9'; k++ {
 				if p == b {
 					z01.PrintRune(k)
