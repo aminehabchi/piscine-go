@@ -8,17 +8,12 @@ func PrintComb2() {
 			d := j + 1
 			for k := i; k <= '9'; k++ {
 				for ; d <= '9'; d++ {
-					if i == '9' {
-						if j == '9' {
-							break
-						}
-					}
 					z01.PrintRune(i)
 					z01.PrintRune(j)
 					z01.PrintRune(' ')
 					z01.PrintRune(k)
 					z01.PrintRune(d)
-					if i < '9' || j < '8' || k < '9' || d < '9' {
+					if i < '9' || j < '8' {
 						z01.PrintRune(',')
 						z01.PrintRune(' ')
 					}
