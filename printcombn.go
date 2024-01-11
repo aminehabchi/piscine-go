@@ -100,7 +100,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(c)
 			z01.PrintRune(b)
 			z01.PrintRune(a)
-			if h != '3' {
+			if h != '2' {
 				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
@@ -116,7 +116,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(c)
 			z01.PrintRune(b)
 			z01.PrintRune(a)
-			if i != '3' {
+			if i != '1' {
 				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
