@@ -3,15 +3,18 @@ package piscine
 func Atoi(s string) int {
 	sum := 0
 	count := 0
+	count2 := 0
 	sign := 1
 	for _, num := range s {
-		if num == '-' && count <= 1 {
+		if num == '-' && count <= 1 && count2 <= 2 {
 			sign = sign * -1
 			count++
+			count2++
 			continue
-		} else if num == '+' && count <= 1 {
+		} else if num == '+' && count <= 1 && count2 <= 2 {
 			sign = sign * 1
 			count++
+			count2++
 			continue
 		}
 
