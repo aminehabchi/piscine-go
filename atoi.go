@@ -14,6 +14,7 @@ func Atoi(s string) int {
 			count++
 			continue
 		}
+
 		if num >= 48 && num <= 57 && count <= 1 {
 			sum = sum*10 + int(num-'0')
 		} else {
