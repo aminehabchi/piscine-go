@@ -18,7 +18,7 @@ func PrintCombN(n int) {
 		if n == 1 {
 			z01.PrintRune(a)
 			if a != '9' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 		}
@@ -26,7 +26,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if b != '8' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 
@@ -36,7 +36,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if c != '7' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 
@@ -47,7 +47,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if d != '6' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 
@@ -59,7 +59,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if e != '5' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 
@@ -73,7 +73,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if f != '4' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 		}
@@ -86,7 +86,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if g != '3' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 
@@ -101,7 +101,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if h != '3' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 		}
@@ -117,7 +117,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(b)
 			z01.PrintRune(a)
 			if i != '3' {
-				z01.PrintRune(';')
+				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
 		}
