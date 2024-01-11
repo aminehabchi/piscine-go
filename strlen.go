@@ -1,6 +1,7 @@
 package piscine
 
 func StrLen(s string) int {
-	a := len(s)
-	return a
+	b := []byte(s)
+
+	return len(b)
 }
