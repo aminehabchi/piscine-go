@@ -5,11 +5,11 @@ func Atoi(s string) int {
 	count := 0
 	sign := 1
 	for _, num := range s {
-		if num == 45 && count <= 1 {
+		if num == '-' && count <= 1 {
 			sign = sign * -1
 			count++
 			continue
-		} else if num == 43 && count <= 1 {
+		} else if num == '+' && count <= 1 {
 			sign = sign * 1
 			count++
 			continue
