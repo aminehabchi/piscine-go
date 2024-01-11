@@ -1,8 +1,6 @@
 package piscine
 
-import (
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
 
 func PrintCombN(n int) {
 	a := '0'
@@ -94,7 +92,7 @@ func PrintCombN(n int) {
 
 		}
 		if n == 8 && a > b && b > c && c > d && d > e && e > f && f > g && g > h {
-
+			z01.PrintRune(h)
 			z01.PrintRune(g)
 			z01.PrintRune(f)
 			z01.PrintRune(e)
