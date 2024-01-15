@@ -1,7 +1,7 @@
 package piscine
 
 func RecursivePower(nb int, power int) int {
-	if nb < 0 || power < 0 {
+	if power < 0 {
 		return 0
 	}
 
