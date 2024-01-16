@@ -21,11 +21,12 @@ func Index(s string, toFind string) int {
 
 	for i := 0; i < len(s)-len(toFind); i++ {
 		if sr[i] == fr[0] {
+			b = ""
 			for j := 0; j < len(toFind); j++ {
 				b = b + string(sr[i+j])
 			}
 			if b == toFind {
-				return 1
+				return i
 			}
 		}
 	}
