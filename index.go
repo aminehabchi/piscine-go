@@ -1,6 +1,9 @@
 package piscine
 
 func Index(s string, toFind string) int {
+	if len(toFind) == 0 {
+		return -1
+	}
 	if len(s) < len(toFind) {
 		return -1
 	}
@@ -8,6 +11,7 @@ func Index(s string, toFind string) int {
 	if s == toFind {
 		return 0
 	}
+
 	if len(toFind) == 1 {
 		for index, char := range s {
 			if string(char) == toFind {
@@ -15,6 +19,7 @@ func Index(s string, toFind string) int {
 			}
 		}
 	}
+
 	sr := []rune(s)
 	fr := []rune(toFind)
 	var b string
