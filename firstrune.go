@@ -1,5 +1,5 @@
 package piscine
 func FirstRune(s string) rune {
- b:=[]byte(s)
-  return rune(b[0])
+ b:=[]rune(s)
+  return b[0]
 }
