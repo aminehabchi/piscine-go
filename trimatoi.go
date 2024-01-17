@@ -17,7 +17,7 @@ func TrimAtoi(s string) int {
 
 	sum := 0
 	for i := 0; i < len(num); i++ {
-		sum = sum*10 + int(num[i])
+		sum = sum*10 + int(num[i]-'0')
 	}
 
 	return sum * sign
