@@ -1,4 +1,4 @@
-package main
+package piscine
 
 import (
 	"github.com/01-edu/z01"
@@ -44,11 +44,4 @@ func PrintNbrBase(nbr int, base string) {
 	for i := 0; i < len(num); i++ {
 		z01.PrintRune(ss[num[i]])
 	}
-}
-
-func main() {
-	PrintNbrBase(9223372036854775807, "0123456789")
-	z01.PrintRune('\n')
-	PrintNbrBase(-9223372036854775808, "0123456789")
-	z01.PrintRune('\n')
 }
