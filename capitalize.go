@@ -19,6 +19,6 @@ func Capitalize(s string) string {
 			}
 		}
 	}
-	s = string(ss)
-	return s
+	b := string(ss)
+	return b
 }
