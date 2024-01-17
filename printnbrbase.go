@@ -21,7 +21,7 @@ func PrintNbrBase(nbr int, base string) {
 	for i := 0; i < len(ss); i++ {
 		for j := 0; j < len(ss); j++ {
 			if j != i {
-				if ss[i] == ss[j] {
+				if ss[i] == ss[j] || ss[i] == '-' || ss[i] == '+' {
 
 					z01.PrintRune('N')
 					z01.PrintRune('V')
