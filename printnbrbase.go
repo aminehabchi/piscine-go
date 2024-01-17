@@ -12,6 +12,12 @@ func PrintNbrBase(nbr int, base string) {
 		z01.PrintRune(ss[0])
 	}
 
+	if len(base)<2{
+		z01.PrintRune('N')
+					z01.PrintRune('V')
+					return
+	}
+
 	for i := 0; i < len(ss); i++ {
 		for j := 0; j < len(ss); j++ {
 			if j != i {
