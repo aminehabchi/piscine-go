@@ -47,6 +47,7 @@ func main() {
 			if i == len(argiment)-1 {
 				z01.PrintRune('\n')
 			}
+			z01.PrintRune(' ')
 			continue
 		}
 		if b < 1 || b > 26 {
