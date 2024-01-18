@@ -33,10 +33,12 @@ func Atoi(s string) int {
 func main() {
 	argiment := os.Args
 	a := 96
+	c := 1
 	if os.Args[1] == "--upper" {
 		a = 64
+		c = 2
 	}
-	for i := 2; i < len(argiment); i++ {
+	for i := c; i < len(argiment); i++ {
 
 		b := Atoi(os.Args[i])
 		if b < 1 || b > 26 {
