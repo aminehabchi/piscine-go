@@ -50,8 +50,8 @@ func main() {
 		}
 
 		z01.PrintRune(rune(b + a))
-
+		if i == len(argiment)-1 {
+			z01.PrintRune('\n')
+		}
 	}
-
-	z01.PrintRune('\n')
 }
