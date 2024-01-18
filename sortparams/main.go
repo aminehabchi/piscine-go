@@ -8,25 +8,22 @@ import (
 
 func main() {
 	argument := os.Args
-	ar := []rune{}
+
 	for i := 1; i < len(argument); i++ {
-
-		c := os.Args[i]
-		d := []rune(c)
-		ar = append(ar, d[0])
-
-	}
-	for i := 0; i < len(ar); i++ {
-		for j := i + 1; j < len(ar); j++ {
-			if j != i {
-				if ar[i] > ar[j] {
-					ar[i], ar[j] = ar[j], ar[i]
+		for j := 1; j < len(argument); j++ {
+			if os.Args[i] < os.Args[j] {
+				if i != j {
+					os.Args[i], os.Args[j] = os.Args[j], os.Args[i]
 				}
 			}
 		}
 	}
-	for i := 0; i < len(ar); i++ {
-		z01.PrintRune(ar[i])
+	for i := 1; i < len(argument); i++ {
+		b := []rune(os.Args[i])
+
+		for j := 0; j < len(b); j++ {
+			z01.PrintRune(b[j])
+		}
 		z01.PrintRune('\n')
 	}
 }
