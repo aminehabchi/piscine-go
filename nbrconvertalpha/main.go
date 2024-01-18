@@ -33,19 +33,25 @@ func Atoi(s string) int {
 func main() {
 	argiment := os.Args
 	a := 96
-	c := 1
-	if os.Args[1] == "--upper" {
-		a = 64
-		c = 2
-	}
-	for i := c; i < len(argiment); i++ {
+
+	for i := 1; i < len(argiment); i++ {
+		if i == 1 {
+			if os.Args[1] == "--upper" {
+				a = 64
+				continue
+			}
+		}
 
 		b := Atoi(os.Args[i])
+
 		if b < 1 || b > 26 {
 			z01.PrintRune(' ')
 			continue
 		}
+
 		z01.PrintRune(rune(b + a))
+
 	}
+
 	z01.PrintRune('\n')
 }
