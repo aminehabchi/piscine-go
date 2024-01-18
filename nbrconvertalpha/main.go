@@ -43,7 +43,12 @@ func main() {
 		}
 
 		b := Atoi(os.Args[i])
-
+		if b == 0 {
+			if i == len(argiment)-1 {
+				z01.PrintRune('\n')
+			}
+			continue
+		}
 		if b < 1 || b > 26 {
 			z01.PrintRune(' ')
 			continue
