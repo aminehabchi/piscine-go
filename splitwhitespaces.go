@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func SplitWhiteSpaces(s string) []string {
 	ss := []rune(s)
