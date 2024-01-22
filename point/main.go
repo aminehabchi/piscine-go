@@ -1,6 +1,21 @@
 package main
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
+
+func rint(s int) {
+	nb := '0'
+	for i := 0; i < s/10; i++ {
+		nb++
+	}
+	z01.PrintRune(nb)
+	nb = '0'
+	for i := 0; i < s%10; i++ {
+		nb++
+	}
+	z01.PrintRune(nb)
+}
 
 type point struct {
 	x int
@@ -16,28 +31,15 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	num := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
-	arr := "x = "
-
-	for points.x > 0 {
-		for i := 0; i < 10; i++ {
-			if points.x%10 == i {
-				arr = arr + num[i]
-			}
+	s1 := "x = a, y = b"
+	for _, i := range s1 {
+		if i == 'a' {
+			rint(points.x)
+		} else if i == 'b' {
+			rint(points.y)
+		} else {
+			z01.PrintRune(i)
 		}
-		points.x /= 10
-	}
-	arr = arr + ", y = "
-	for points.y > 0 {
-		for i := 0; i < 10; i++ {
-			if points.y%10 == i {
-				arr = arr + num[i]
-			}
-		}
-		points.y /= 10
-	}
-	for _, char := range arr {
-		z01.PrintRune(char)
 	}
 
 	z01.PrintRune('\n')
