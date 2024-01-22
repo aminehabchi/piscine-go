@@ -16,34 +16,41 @@ func main() {
 	points := &point{}
 
 	setPoint(points)
-	z01.PrintRune('x')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
 	num := []rune{48, 49, 50, 51, 52, 53, 54, 56, 57}
-
-	for points.x > 0 {
-		for i := 0; i < 10; i++ {
-			if points.x%10 == i {
-				z01.PrintRune(num[i])
+	//"x = %, y = %\n"
+	for i := 0; i < 12; i++ {
+		c := 0
+		if i == 0 {
+			z01.PrintRune('x')
+		}
+		if i == 7 {
+			z01.PrintRune('y')
+		}
+		if i == 4 || i == 11 {
+			if i == 4 {
+				c = points.x
+			} else {
+				c = points.y
+			}
+			for c > 0 {
+				for i := 0; i < 10; i++ {
+					if c%10 == i {
+						z01.PrintRune(num[i])
+					}
+				}
+				c /= 10
 			}
 		}
-		points.x /= 10
-	}
-
-	z01.PrintRune(',')
-	z01.PrintRune(' ')
-	z01.PrintRune('y')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-
-	for points.y > 0 {
-		for i := 0; i < 10; i++ {
-			if points.y%10 == i {
-				z01.PrintRune(num[i])
-			}
+		if i == 1 || i == 3 || i == 6 || i == 8 || i == 10 {
+			z01.PrintRune(' ')
 		}
-		points.y /= 10
+		if i == 2 || i == 9 {
+			z01.PrintRune('=')
+		}
+		if i == 5 {
+			z01.PrintRune(',')
+		}
 	}
+
 	z01.PrintRune('\n')
 }
