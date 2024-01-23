@@ -21,5 +21,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("%s\n", string(content))
+	fmt.Printf("%s", string(content))
 }
