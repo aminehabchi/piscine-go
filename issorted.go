@@ -1,16 +1,5 @@
 package piscine
 
-func f(x, y int) int {
-	if x > y {
-		return 1
-	}
-	if x == y {
-		return 0
-	}
-
-	return -1
-}
-
 func IsSorted(f func(a, b int) int, a []int) bool {
 	if a[0] > a[len(a)-1] {
 		for i := 0; i < len(a)-1; i++ {
@@ -26,4 +15,15 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 	}
 	return true
+}
+
+func f(x, y int) int {
+	if x > y {
+		return 1
+	}
+	if x == y {
+		return 0
+	}
+
+	return -1
 }
