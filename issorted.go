@@ -1,12 +1,13 @@
 package piscine
 
-func f(a, b int) int {
-	if a > b {
+func f(x, y int) int {
+	if x > y {
 		return 1
 	}
-	if a == b {
+	if x == y {
 		return 0
 	}
+
 	return -1
 }
 
