@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"bufio"
 	"io/ioutil"
 	"os"
 
@@ -13,12 +13,12 @@ func main() {
 
 	if len(arg) == 0 {
 		for {
-			c := ""
-			fmt.Scanln(&c)
-			for i := 0; i < len(c); i++ {
-				z01.PrintRune(rune(c[i]))
+			reader := bufio.NewReader(os.Stdin)
+			message, _ := reader.ReadString('\n')
+			for i := 0; i < len(message); i++ {
+				z01.PrintRune(rune(message[i]))
 			}
-			z01.PrintRune('\n')
+
 		}
 	}
 
@@ -26,11 +26,14 @@ func main() {
 		name := "./" + arg[i]
 		content, err := ioutil.ReadFile(name)
 		if err != nil && len(content) == 0 {
-			er := "ERROR: open " + name + ": no such file or directory"
+			er := "ERROR: open " + arg[i] + ": no such file or directory"
 			for i := 0; i < len(er); i++ {
 				z01.PrintRune(rune(er[i]))
 			}
 			z01.PrintRune('\n')
+			if len(arg) == 1 {
+				os.Exit(1)
+			}
 		}
 		for i := 0; i < len(content); i++ {
 			z01.PrintRune(rune(content[i]))
