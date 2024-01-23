@@ -7,7 +7,6 @@ func f(a, b int) int {
 	if a == b {
 		return 0
 	}
-
 	return -1
 }
 
