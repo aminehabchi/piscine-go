@@ -9,6 +9,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 	}
 	if b == false {
+		b = true
 		for j := 0; j < len(a)-1; j++ {
 			if f(a[j], a[j+1]) > 0 {
 				b = false
