@@ -23,11 +23,14 @@ func main() {
 	}
 
 	for i := 0; i < len(arg); i++ {
-
 		name := "./" + arg[i]
 		content, err := ioutil.ReadFile(name)
 		if err != nil && len(content) == 0 {
-			print("ERROR: open " + name + ": no such file or directory")
+			er := "ERROR: open " + name + ": no such file or directory"
+			for i := 0; i < len(er); i++ {
+				z01.PrintRune(rune(er[i]))
+			}
+			z01.PrintRune('\n')
 		}
 		for i := 0; i < len(content); i++ {
 			z01.PrintRune(rune(content[i]))
