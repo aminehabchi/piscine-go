@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func ShoppingSummaryCounter(str string) map[string]int {
 	a := map[string]int{}
@@ -45,11 +41,4 @@ func ShoppingSummaryCounter(str string) map[string]int {
 	}
 
 	return a
-}
-
-func main() {
-	summary := " "
-	for index, element := range ShoppingSummaryCounter(summary) {
-		fmt.Println(index, "=>", element)
-	}
 }
