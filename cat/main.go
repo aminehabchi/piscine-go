@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"io/ioutil"
 	"os"
 
@@ -12,14 +11,12 @@ func main() {
 	arg := os.Args[1:]
 
 	if len(arg) == 0 {
-		for {
-			reader := bufio.NewReader(os.Stdin)
-			message, _ := reader.ReadString('\n')
-			for i := 0; i < len(message); i++ {
-				z01.PrintRune(rune(message[i]))
-			}
 
-		}
+		dataIn := make([]byte, 1024)
+		n, _ := os.Stdin.Read(dataIn)
+		nn, _ := os.Stdout.Write(dataIn)
+		n = nn
+		nn = n
 	}
 
 	for i := 0; i < len(arg); i++ {
