@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func ShoppingSummaryCounter(str string) map[string]int {
 	a := map[string]int{"Burger": 0, "Water": 0, "Carrot": 0, "Coffee": 0, "Chips": 0}
@@ -28,11 +24,4 @@ func ShoppingSummaryCounter(str string) map[string]int {
 	}
 
 	return a
-}
-
-func main() {
-	summary := "Burger Water Carrot Coffee Water Water Chips Carrot Carrot Burger Carrot Water"
-	for index, element := range ShoppingSummaryCounter(summary) {
-		fmt.Println(index, "=>", element)
-	}
 }
