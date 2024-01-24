@@ -1,4 +1,8 @@
-package piscine
+package main
+
+import (
+	"fmt"
+)
 
 func ShoppingSummaryCounter(str string) map[string]int {
 	a := map[string]int{}
@@ -34,8 +38,18 @@ func ShoppingSummaryCounter(str string) map[string]int {
 				count++
 			}
 		}
+		if bb[i] == "" {
+			count++
+		}
 		a[bb[i]] = count
 	}
 
 	return a
+}
+
+func main() {
+	summary := " "
+	for index, element := range ShoppingSummaryCounter(summary) {
+		fmt.Println(index, "=>", element)
+	}
 }
