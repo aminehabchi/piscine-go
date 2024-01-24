@@ -7,6 +7,7 @@ func Compact(ptr *[]string) int {
 	for i := 0; i < len(a); i++ {
 		if a[i] != "" {
 			b = append(b, a[i])
+			count++
 		}
 	}
 	*ptr = b
