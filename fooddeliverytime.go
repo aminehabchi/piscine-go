@@ -19,5 +19,5 @@ func FoodDeliveryTime(order string) int {
 	case order == "nuggets":
 		return nuggets.preptime
 	}
-	return 0
+	return 404
 }
