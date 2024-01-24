@@ -19,13 +19,12 @@ func main() {
 				z01.PrintRune(rune(er[i]))
 			}
 			z01.PrintRune('\n')
-			if len(arg) == 1 {
-				os.Exit(1)
-			}
+
+			os.Exit(1)
+
 		}
 		for i := 0; i < len(content); i++ {
 			z01.PrintRune(rune(content[i]))
 		}
-
 	}
 }
