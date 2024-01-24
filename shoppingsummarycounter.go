@@ -34,7 +34,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 				count++
 			}
 		}
-		if bb[i] == "" {
+		if bb[i] == "" && len(bb) == 1 {
 			count++
 		}
 		a[bb[i]] = count
