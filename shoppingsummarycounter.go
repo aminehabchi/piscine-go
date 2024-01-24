@@ -10,5 +10,13 @@ func ShoppingSummaryCounter(str string) map[string]int {
 			m[ele] = 1
 		}
 	}
+	v := ""
+	if m == nil {
+		m[v] = 1
+	}
+	if len(m) == 1 {
+		v = " "
+		m[v] = 2
+	}
 	return m
 }
