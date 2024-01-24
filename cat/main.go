@@ -10,15 +10,6 @@ import (
 func main() {
 	arg := os.Args[1:]
 
-	if len(arg) == 0 {
-
-		dataIn := make([]byte, 1024)
-		n, _ := os.Stdin.Read(dataIn)
-		nn, _ := os.Stdout.Write(dataIn)
-		n = nn
-		nn = n
-	}
-
 	for i := 0; i < len(arg); i++ {
 		name := "./" + arg[i]
 		content, err := ioutil.ReadFile(name)
