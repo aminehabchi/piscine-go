@@ -6,5 +6,12 @@ func ActiveBits(n int) int {
 		nn = append(nn, n%2)
 		n /= 2
 	}
-	return len(nn)
+	c := 0
+	for i := 0; i < len(nn); i++ {
+		if nn[i] == 1 {
+			c++
+		}
+	}
+
+	return c
 }
