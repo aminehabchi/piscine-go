@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package piscine
 
 func LoafOfBread(str string) string {
 	b := ""
@@ -29,10 +25,4 @@ func LoafOfBread(str string) string {
 	println(b)
 	d = d + "\n"
 	return d
-}
-
-func main() {
-	fmt.Print(LoafOfBread("deliciousbread"))
-	fmt.Print(LoafOfBread("This is a loaf of bread"))
-	fmt.Print(LoafOfBread("loaf"))
 }
