@@ -6,9 +6,6 @@ func RockAndRoll(n int) string {
 		return b
 	}
 	b = "error: non divisible\n"
-	if n == 0 {
-		return b
-	}
 	if n%2 == 0 && n%3 == 0 {
 		b = "rock and roll\n"
 	} else if n%2 == 0 {
