@@ -1,11 +1,11 @@
 package piscine
 
 func RockAndRoll(n int) string {
-	b := "number is negative\n"
+	b := "error: number is negative\n"
 	if n < 0 {
 		return b
 	}
-	b = "non divisible\n"
+	b = "error: non divisible\n"
 	if n == 0 {
 		return b
 	}
