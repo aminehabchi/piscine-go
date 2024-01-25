@@ -8,23 +8,29 @@ import (
 )
 
 func main() {
-	arg := os.Args[1:]
+	a := os.Args[1:]
 
-	for i := 0; i < len(arg); i++ {
-		name := "./" + arg[i]
-		content, err := ioutil.ReadFile(name)
-		if err != nil && len(content) == 0 {
-			er := "ERROR: open " + arg[i] + ": no such file or directory"
-			for i := 0; i < len(er); i++ {
-				z01.PrintRune(rune(er[i]))
-			}
-			z01.PrintRune('\n')
-
-			os.Exit(1)
-
+	arr := make([]byte, 1024)
+	exit := 1
+	if len(a) == 0 {
+		da, err := os.Stdin.Read(arr)
+		if err == nil {
+			PrintStr(string(arr[:da]))
 		}
-		for i := 0; i < len(content); i++ {
-			z01.PrintRune(rune(content[i]))
+	}
+	for i := 0; i < len(a); i++ {
+		da, err := ioutil.ReadFile(a[i])
+		if err != nil {
+			PrintStr("ERROR: open " + a[i] + ": no such file or directory\n")
+			os.Exit(exit)
+			return
 		}
+		PrintStr(string(da))
+	}
+}
+
+func PrintStr(v string) {
+	for i := 0; i < len(v); i++ {
+		z01.PrintRune(rune(v[i]))
 	}
 }
