@@ -4,7 +4,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 	m := map[string]int{}
 	s := ""
 	for _, char := range str {
-		if char == ' ' {
+		if char == ' ' || char == rune(str[len(str)-1]) {
 			m[s] = m[s] + 1
 			s = ""
 		} else {
