@@ -11,6 +11,6 @@ func ShoppingSummaryCounter(str string) map[string]int {
 			s = ""
 		}
 	}
-	m[s] += 1
+
 	return m
 }
