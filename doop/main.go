@@ -99,7 +99,12 @@ func main() {
 	}
 	if arg[1] == "/" {
 		if num2 == 0 {
-			print("No division by 0")
+
+			s := "No division by 0"
+			for i := 0; i < len(s); i++ {
+				z01.PrintRune(rune(s[i]))
+			}
+			z01.PrintRune('\n')
 			return
 		}
 		a := int(num1 / num2)
@@ -107,7 +112,11 @@ func main() {
 	}
 	if arg[1] == "%" {
 		if num2 == 0 {
-			print("No modulo by 0")
+			ss := "No modulo by 0"
+			for i := 0; i < len(ss); i++ {
+				z01.PrintRune(rune(ss[i]))
+			}
+			z01.PrintRune('\n')
 			return
 		}
 		a := int(num1 % num2)
