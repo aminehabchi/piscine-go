@@ -7,6 +7,5 @@ func ListLast(l *List) interface{} {
 		d = c.Data
 		c = c.Next
 	}
-
 	return d
 }
