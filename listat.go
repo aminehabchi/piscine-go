@@ -1,9 +1,9 @@
-package piscine
+package main
 
 func ListAt(l *NodeL, pos int) *NodeL {
 	a := 0
 	c := l
-	v := &NodeL{}
+	v := &NodeL
 	for c != nil {
 		if a == pos {
 			return c
