@@ -4,10 +4,12 @@ func ListPushFront(l *List, data interface{}) {
 
 	if l.Tail == nil {
 		l.Tail = n
+        l.Head = n
 	} else {
 		n.Next = l.Head
+        l.Head = n
 	}
-	l.Head = n
+	
 }
 type NodeL struct {
 	Data interface{}
