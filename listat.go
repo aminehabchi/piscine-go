@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func ListAt(l *NodeL, pos int) *NodeL {
 	a := 0
