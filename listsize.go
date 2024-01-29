@@ -10,7 +10,6 @@ func ListPushFront(l *List, data interface{}) {
 		n.Next = l.Head
 		l.Head = n
 	}
-
 }
 
 type NodeL struct {
