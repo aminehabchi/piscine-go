@@ -3,7 +3,7 @@ package piscine
 func ListAt(l *NodeL, pos int) *NodeL {
 	a := 0
 	c := l
-	v := &NodeL
+
 	for c != nil {
 		if a == pos {
 			return c
@@ -11,5 +11,6 @@ func ListAt(l *NodeL, pos int) *NodeL {
 		a++
 		c = c.Next
 	}
-	return v
+	c = nil
+	return c
 }
