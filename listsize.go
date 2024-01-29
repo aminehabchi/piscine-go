@@ -24,8 +24,8 @@ type List struct {
 
 func ListSize(l *List) int {
 	c := l.Head
-	a := 1
-	for c.Next != nil {
+	a := 0
+	for c != nil {
 		c = c.Next
 		a++
 	}
