@@ -13,7 +13,7 @@ func ListSort(l *NodeI) *NodeI {
 		c++
 
 	}
-	println(c)
+
 	for i := 0; i < c; i++ {
 		a = l
 		for a.Next != nil {
