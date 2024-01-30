@@ -4,10 +4,10 @@ func ListRemoveIf(l *List, data_ref interface{}) {
 	c := l.Head
 	var p *NodeL
 	if l1.Head == nil {
-        l1.Head = l2.Head
-        l1.Tail = l2.Tail
-        return
-    }
+		l1.Head = l2.Head
+		l1.Tail = l2.Tail
+		return
+	}
 	for c != nil {
 		if c.Data == data_ref {
 			if p == nil {
