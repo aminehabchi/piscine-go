@@ -8,11 +8,12 @@ type NodeI struct {
 func ListSort(l *NodeI) *NodeI {
 	a := l
 	c := 0
-	for a.Next != nil {
-		c++
+	for a != nil {
 		a = a.Next
-	}
+		c++
 
+	}
+	println(c)
 	for i := 0; i < c; i++ {
 		a = l
 		for a.Next != nil {
