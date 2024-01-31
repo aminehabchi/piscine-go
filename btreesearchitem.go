@@ -18,5 +18,10 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 			return root.Right
 		}
 	}
-	return nil
+	root.Data = elem
+	root.Left = nil
+	root.Right = nil
+	root.Parent = nil
+
+	return root
 }
