@@ -1,9 +1,5 @@
 package piscine
 
-import (
-	"math"
-)
-
 func TenToBase(n int, baseTo int) []int {
 	nb := []int{}
 	for n != 0 {
@@ -16,7 +12,7 @@ func TenToBase(n int, baseTo int) []int {
 func ToTen(n []int, b int) int {
 	sum := 0
 	for i := len(n) - 1; i >= 0; i-- {
-		sum = sum + n[i]*int(math.Pow(float64(b), float64(len(n)-1-i)))
+		sum = sum + n[i]*pow(b, len(n)-1-i)
 	}
 	return sum
 }
@@ -48,4 +44,15 @@ func ConvertBase(nbr, baseFrom, baseTo string) string {
 		}
 	}
 	return str
+}
+
+func pow(a int, b int) int {
+	if b == 0 {
+		return 1
+	}
+	r := a
+	for i := 1; i < b; i++ {
+		r = r * a
+	}
+	return r
 }
