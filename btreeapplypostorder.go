@@ -15,7 +15,7 @@ func BTreeApplyPostorder(root *TreeNode, f func(...interface{}) (int, error)) {
 		if root.Right.Data != "" {
 			f(root.Right.Data)
 			root.Right.Data = ""
-			BTreeApplyPostorder(root.Left, f)
+			BTreeApplyPostorder(root.Right, f)
 		}
 	}
 
