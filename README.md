@@ -7,7 +7,7 @@ Welcome to the **Piscine Go** repository! This project is dedicated to my journe
 This repository contains my exercises, notes, and experiments as I dive into learning Go. It follows a structured approach, inspired by the "Piscine" style of intensive, hands-on learning.
 
 > **Note:**  
-> All of these exercises were completed during a one-month intensive program at **Zone01 Oujda** in **September 2024**.
+> All of these exercises were completed during a one-month intensive program at **Zone01 Oujda** in **01 2024**.
 
 ## What I’m Learning
 
