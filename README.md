@@ -6,6 +6,9 @@ Welcome to the **Piscine Go** repository! This project is dedicated to my journe
 
 This repository contains my exercises, projects, notes, and experiments as I dive into learning Go. It follows a structured approach, inspired by the "Piscine" style of intensive, hands-on learning.
 
+> **Note:**  
+> All of these exercises were completed during a one-month intensive program at **Zone01 Oujda** in **September 2024**.
+
 ## What I’m Learning
 
 Throughout this repository, I cover a variety of fundamental and advanced topics in Go, including but not limited to:
@@ -32,7 +35,6 @@ Throughout this repository, I cover a variety of fundamental and advanced topics
 - Go is known for its simplicity, performance, and strong support for concurrency.
 - It is widely used for building scalable and efficient software, especially in backend systems and cloud infrastructure.
 
-
-
+---
 
 Happy coding! 🚀
