@@ -24,11 +24,6 @@ Throughout this repository, I cover a variety of fundamental and advanced topics
 - **Standard Library**: Utilizing Go’s built-in packages for tasks like I/O, formatting, etc.
 - **Testing**: Writing and running tests in Go.
 
-## Repository Structure
-
-- Each folder or file corresponds to a specific topic, exercise, or project.
-- Code is well-commented to document what I’ve learned and implemented.
-- There may be notes or markdown files explaining key concepts or summarizing what I’ve learned in each section.
 
 ## Why Go?
 
